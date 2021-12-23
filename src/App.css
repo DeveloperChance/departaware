@@ -1,0 +1,314 @@
+body {
+  background-color: #282c34;
+  color           : white;
+}
+
+.App {
+  display    : flex;
+  flex-flow  : column;
+  flex-shrink: 1 0 auto;
+  margin     : 5px auto;
+  max-width  : 320px;
+  min-height : 95vh;
+}
+
+.App-Footer {
+  display    : flex;
+  flex-flow  : column;
+  flex-shrink: 0;
+  margin     : 5px auto 0;
+  text-align : center;
+  width      : 100%;
+}
+
+.App-Footer p {
+  font-size  : 11px;
+  font-weight: 600;
+  margin     : 0 auto 5px;
+  text-align : center;
+}
+
+.divider-center {
+  margin          : 0 auto;
+  height          : 2px;
+  width           : 90%;
+  background-color: #323246;
+}
+
+.padding-5 {
+  padding: 5px;
+}
+
+.padding-10 {
+  padding: 10px;
+}
+
+.padding-15 {
+  padding: 15px;
+}
+
+.Departures-Title {
+  font-size    : 21px;
+  margin-bottom: 0;
+}
+
+.Departures-Selection {
+  font-size: 16px;
+  margin   : 5px;
+}
+
+.Departures-Gates-Container {
+  display      : flex;
+  flex-flow    : row wrap;
+  margin-bottom: 10px;
+}
+
+.Departures-Gate-Container {
+  background-color: #323246;
+  border-radius   : 4px;
+  box-shadow      : rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  margin          : 3px 5px;
+  padding         : 3px 5px;
+  width           : fit-content;
+}
+
+.Departures-GateText {
+  font-size  : 16px;
+  font-weight: 600;
+  margin     : 0;
+}
+
+.Departures-Form-Toggle {
+  background-color: #323246;
+  border-radius   : 4px;
+  box-shadow      : rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  cursor          : pointer;
+  font-size       : 14px;
+  font-weight     : 600;
+  height          : 24px;
+  line-height     : 24px;
+  text-align      : center;
+  user-select     : none;
+  margin          : 2px auto 5px;
+  width           : 80%;
+}
+
+.Departures-Form-Toggle:hover {
+  background-color: #3c3c50;
+}
+
+.Departures-Form {
+  display        : flex;
+  flex-flow      : row wrap;
+  justify-content: center;
+}
+
+.Departures-Form-Option {
+  background-color: #323246;
+  border-radius   : 4px;
+  box-shadow      : rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  cursor          : pointer;
+  display         : flex;
+  flex-flow       : row;
+  font-size       : 14px;
+  height          : 24px;
+  line-height     : 24px;
+  margin          : 5px;
+  user-select     : none;
+  width           : 64px;
+}
+
+.Departures-Form-Option:hover {
+  background-color: #3c3c50;
+}
+
+.Departures-Form-Option-Label {
+  cursor     : pointer;
+  font-weight: 600;
+  margin     : 0 auto;
+}
+
+.Departures-Form-Option-Date{
+  background-color: #323246;
+  border: none;
+  border-radius   : 4px;
+  box-shadow      : rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  color: white;
+  cursor          : pointer;
+  display         : flex;
+  flex-flow       : row;
+  font-size       : 14px;
+  line-height     : 24px;
+  margin          : 5px;
+}
+
+.Departures-Container {
+  display  : flex;
+  flex-flow: column;
+  margin   : 10px auto;
+  height   : fit-content;
+  width    : 100%;
+}
+
+.Departure-Flight-Container {
+  background-color: #3c3c50;
+  border-radius   : 4px;
+  box-shadow      : rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  display         : flex;
+  flex-flow       : column;
+  justify-content : center;
+  margin          : 10px auto;
+  height          : 112px;
+  width           : 100%;
+}
+
+/* Panel Tables */
+.panel-table {
+  display  : table;
+  font-size: 14px;
+  margin   : 5px auto;
+  width    : 320px;
+}
+
+.panel-thead {
+  display: table-header-group;
+}
+
+.panel-thead-tr {
+  display   : table-row;
+  text-align: left;
+}
+
+.panel-thead-th {
+  background-color: #323237;
+  border          : 1px solid #1e1e23;
+  box-shadow      : 0px 0px 10px 0px rgba(0, 0, 0, .33);
+  cursor          : default;
+  display         : table-cell;
+  font-size       : 12px;
+  font-weight     : 600;
+  text-align      : center;
+  padding         : 7px 10px;
+}
+
+.panel-thead-th:first-child {
+  border-top-left-radius: 5px;
+}
+
+.panel-thead-th:last-child {
+  border-top-right-radius: 5px;
+}
+
+.panel-tbody {
+  display: table-row-group;
+}
+
+.panel-tbody-tr {
+  background-color: #323237;
+  display         : table-row;
+  cursor          : pointer;
+  transition      : .11s ease all;
+}
+
+.panel-tbody-tr:nth-child(odd) {
+  background-color: #5a5a5f;
+}
+
+.panel-tbody-tr:hover {
+  transform: translateX(2px);
+}
+
+.panel-tbody-td {
+  border    : 1px solid #1e1e23;
+  display   : table-cell;
+  padding   : 7px 5px;
+  position  : relative;
+  text-align: center;
+}
+
+.panel-tbody-td-span {
+  display   : flex;
+  flex-flow : column;
+  text-align: center;
+  margin    : 0;
+}
+
+.panel-tbody-td-info {
+  font-size: 14px;
+  margin   : -5px auto 0;
+}
+
+.panel-tbody-td-label {
+  color      : #9696a0;
+  font-size  : 11px;
+  font-weight: 600;
+  margin     : 0 auto -5px;
+}
+
+.panel-tbody-tr-extended {
+  background-color: #1e1e28;
+  border          : 1px solid #1e1e23;
+  box-shadow      : 0px 0px 10px 0px rgba(0, 0, 0, .33);
+  display         : none;
+  flex-flow       : column;
+  height          : 80px;
+  position        : absolute;
+  width           : 318px;
+}
+
+.panel-tbody-td-note-span {
+  background-color: #bf4342;
+  bottom          : 0;
+  border          : 1px solid #1e1e23;
+  left            : -.5px;
+  height          : 4px;
+  position        : absolute;
+  width           : 100%;
+}
+
+.panel-tbody-tr-extended-note {
+  background-color: #bf4342;
+  height          : 17px;
+  width           : 100%;
+}
+
+.panel-tbody-tr-extended-note p {
+  color      : white;
+  font-size  : 13px;
+  font-weight: 600;
+  line-height: 16px;
+  margin     : 0;
+  text-align : center;
+}
+
+.panel-tbody-tr-extended-updated{
+  bottom: -10px;
+  color: #464646;
+  font-size: 11px;
+  font-weight: 600;
+  right: 4px;
+  position: absolute;
+}
+
+.panel-tbody-tr-extended-temp{
+  margin: 5px;
+}
+
+.panel-tbody-tr-extended-temp p{
+  font-size: 12px;
+  margin: 0;
+}
+
+.panel-tbody-tr-extended-padding {
+  display : none;
+  height  : 80px;
+  position: relative;
+}
+
+.panel-tbody-tr-extended-visible {
+  display: flex;
+}
+
+.panel-tbody-tr-extended-padding-visible {
+  display: block;
+}
