@@ -70,7 +70,8 @@ class Departures extends React.Component {
     this.setState({ allowSubmit: false });
 
     // Convert Locale Date to Unix Locale Format
-    let localeDate = new Date(this.state.selectedDate).toLocaleDateString();
+    let localeDate = this.state.selectedDate.split('-');
+    localeDate = `${localeDate[1]}/${localeDate[2]}/${localeDate[0]}`;
     let convertDate = Math.floor(new Date(localeDate).getTime() / 1000);
 
     axios.get(`${apiEndpoint}/depart/departures`, { params: { date: convertDate, gates: this.state.selectedGates } })
