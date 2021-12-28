@@ -21,7 +21,7 @@ class Departures extends React.Component {
   }
 
   componentDidMount = () => {
-    this.getDeparturesInterval = setInterval(this.getDepartures, 1000 * 30);
+    //this.getDeparturesInterval = setInterval(this.getDepartures, 1000 * 30);
     let selectedGates = JSON.parse(localStorage.getItem("selectedGates"));
     if (!selectedGates) selectedGates = [];
     let selectedDate = new Date().toLocaleDateString().split('/');;
@@ -34,7 +34,7 @@ class Departures extends React.Component {
   };
 
   componentWillUnmount = () => {
-    clearInterval(this.getDeparturesInterval);
+    //clearInterval(this.getDeparturesInterval);
   }
 
   handleGateSelection = (gate) => {
