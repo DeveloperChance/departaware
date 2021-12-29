@@ -190,12 +190,12 @@ class Departures extends React.Component {
 
                     // Gate Logic
                     let gateColor = 'inherit';
-                    if (flight.gateChange && flight.gateChange.gate_origin && flight.gateChange.gate) gateColor = '#bf4342';
+                    if (flight.gateChange && flight.gate_origin && flight.gateChange.gate) gateColor = '#bf4342';
                     if (flight.status === "Cancelled") gateColor = '#464646';
 
                     return <React.Fragment key={flight.ident}>
                       <div onClick={() => this.handleFlightExtended(flight.ident)} className="panel-tbody-tr">
-                        <div className="panel-tbody-td" style={{ backgroundColor: statusColor }}>{(flight.gateChange && flight.gateChange.gate_origin && flight.gateChange.gate) && (<span className='panel-tbody-td-note-span' />)}</div>
+                        <div className="panel-tbody-td" style={{ backgroundColor: statusColor }}>{(flight.gateChange && flight.gate_origin && flight.gateChange.gate) && (<span className='panel-tbody-td-note-span' />)}</div>
                         <div className="panel-tbody-td">
                           <span className="panel-tbody-td-span">
                             <span className="panel-tbody-td-info" style={{ textDecoration: status === 'Cancelled' ? 'line-through' : 'none', color: status === 'Cancelled' ? '#464646' : 'inherit' }}>{flight.ident}</span>
@@ -223,7 +223,7 @@ class Departures extends React.Component {
                         <div className="panel-tbody-td" style={{ textDecoration: status === 'Cancelled' ? 'line-through' : 'none', color: status === 'Cancelled' ? '#464646' : 'inherit' }}>{flight.destination}</div>
                       </div>
                       <div className={this.state.selectedFlight === flight.ident ? `panel-tbody-tr-extended-visible panel-tbody-tr-extended` : `panel-tbody-tr-extended`}>
-                        {(flight.gateChange && flight.gateChange.gate_origin && flight.gateChange.gate) && (<div className='panel-tbody-tr-extended-note'><p>Gate Change: {flight.gate_origin}  &#187;  {flight.gateChange.gate} </p></div>)}
+                        {(flight.gateChange && flight.gate_origin && flight.gateChange.gate) && (<div className='panel-tbody-tr-extended-note'><p>Gate Change: {flight.gate_origin}  &#187;  {flight.gateChange.gate} </p></div>)}
                         <span className='panel-tbody-tr-extended-temp'>
                           <p style={{ color: '#464646' }}>Registration: <b style={{ color: 'white' }}>{flight.registration}</b></p>
                           {flight.inbound_dep_delay ? <p style={{ color: '#464646' }}>Inbound Arrival Delay: <b style={{ color: '#eb4034' }}>{Math.floor(flight.inbound_dep_delay / 60)}m</b></p> : ''}
