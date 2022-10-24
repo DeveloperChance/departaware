@@ -8,17 +8,17 @@ The scope of this prototype is limited to Southwest Airlines departing from Las 
 
 # Technologies Used
 - The web app is designed to function as an SPA utilizing ReactJS.
-- The dedicated API is designed as a REST API running on ExpressJS with MySql as the database.
+- The dedicated API that was designed for the web app, is as a REST API running on ExpressJS with MySql as the database.
 
 
 # Demo
-The Demo can be reached at https://depart.developerchance.com
+The Demo can be reached at https://depart.developerchance.com .
+[API for the demo has been taken down]
 
 ---
 
 # Running Your Own Prototype
-The current prototype utilizes the AeroAPI and soon Cirius. I am currently looking into adding Rate Limiting to the HTTP Service Handler to be functional with the Free Base AeroAPI Subscription. Cirius API has not yet been integrated but will require an approved application to utilize the API if integrated.
-
+The API for this app was not built on a public API. You can build your own and connect it as this application is a visual for data.
 
 # The Future of the Prototype
-This prototype was designed to cater a specific industry and whether or not the project will continue is unknown.
+This prototype was designed to cater a specific industry and its current scope won't be expanded upon.
